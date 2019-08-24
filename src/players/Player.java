@@ -20,15 +20,15 @@ public class Player extends Character {
 	 */
 	public Player(String name) {
 		super(name);
-		inventory = new Inventory();
-		weaponInventory = inventory.getWeaponInventory();
+		this.inventory = new Inventory();
+		this.weaponInventory = inventory.getWeaponInventory();
 	}
 	
 	/**
 	 * Shows what is in the inventory of this player's object.
 	 */
 	public void lookAtInventory() {
-		super.tellWithName(this, "In my inventory, I have :\n" + inventory.toString());
+		super.tellWithName(this, "In my inventory, I have :\n" + this.inventory.toString());
 	}
 	
 	/**
